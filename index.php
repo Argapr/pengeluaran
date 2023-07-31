@@ -34,35 +34,27 @@ $pengeluaran = query("SELECT * FROM pengeluaran_harian")
   </header>
   <main>
 
-    <div class="table-responsive">
-        <table class="table table-striped
-        table-hover	
-        table-borderless
-        table-primary
-        align-middle">
-            <thead class="table-light">
-                <tr>
-                    <th>Tanggal</th>
-                    <th>Bulan</th>
-                    <th>Jumlah</th>
-                    <th>Saldo</th>
-                </tr>
-                </thead>
-                <?php 
-                  foreach( $pengeluaran as $row) :
-                ?>
-                <tbody class="table-group-divider">
-                    <tr class="table-primary" >
-                        <td scope="row"><?= $row["tanggal"] ?></td>
-                        <td><?= $row["bulan"] ?></td>
-                        <td><?= $row["jumlah"] ?></td>
-                        <td><?= $row["saldo"] ?></td>
-                    </tr>
-                </tbody>
-                <?php 
-                  endforeach;
-                ?>
-        </table>
+  <div class="table-responsive">
+      <table class="table table-striped table-hover table-primary align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Tanggal</th>
+            <th>Bulan</th>
+            <th>Jumlah</th>
+            <th>Saldo</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($pengeluaran as $row) : ?>
+          <tr>
+            <td scope="row"><?= $row["tanggal"] ?></td>
+            <td><?= $row["bulan"] ?></td>
+            <td><?= $row["jumlah_keluar"] ?></td>
+            <td><?= $row["saldo"] ?></td>
+          </tr>
+        <?php endforeach; ?>
+        </tbody>
+      </table>
     </div>
     
 
