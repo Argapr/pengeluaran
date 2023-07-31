@@ -29,6 +29,7 @@ $pengeluaran = query("SELECT * FROM pengeluaran_harian")
     
     <h1>Pengeluaran Harian Saya</h1>
     <p>saya membuat tabel pengeluaran harian ini bertujuan untuk saya bisa mengetahui berapa pengeluaran harian saya.</p>
+    <a href="tambah.php">tambah</a>
 
   </header>
   <main>
@@ -43,7 +44,7 @@ $pengeluaran = query("SELECT * FROM pengeluaran_harian")
                 <tr>
                     <th>Tanggal</th>
                     <th>Bulan</th>
-                    <th>Jumblah</th>
+                    <th>Jumlah</th>
                     <th>Saldo</th>
                 </tr>
                 </thead>
@@ -54,7 +55,7 @@ $pengeluaran = query("SELECT * FROM pengeluaran_harian")
                     <tr class="table-primary" >
                         <td scope="row"><?= $row["tanggal"] ?></td>
                         <td><?= $row["bulan"] ?></td>
-                        <td><?= $row["jumblah"] ?></td>
+                        <td><?= $row["jumlah"] ?></td>
                         <td><?= $row["saldo"] ?></td>
                     </tr>
                 </tbody>
